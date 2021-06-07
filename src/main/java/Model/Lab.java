@@ -36,6 +36,7 @@ public class Lab {
 
 	public void setContactno(String contactno) {
 		this.contactno = contactno;
+		System.out.println("Hello");
 	}
 
 }
