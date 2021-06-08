@@ -42,7 +42,7 @@ public class RegistrationController {
 		CommunicationDTO communicationDTO = new CommunicationDTO();
 		communicationDTO.setPhone(phone);
 		userRegistrationDTO.setCommunicationDTO(communicationDTO);
-		;
+		
 
 		return "user-registration-page";
 	}

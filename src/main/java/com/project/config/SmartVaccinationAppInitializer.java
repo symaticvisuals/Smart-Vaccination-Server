@@ -22,7 +22,7 @@ public class SmartVaccinationAppInitializer extends AbstractAnnotationConfigDisp
 	// FOR URL MAPPING
 	@Override
 	protected String[] getServletMappings() {
-		String arr[] = { "/mywebsite.com/*" };
+		String arr[] = { "/" };
 		return arr;
 	}
 

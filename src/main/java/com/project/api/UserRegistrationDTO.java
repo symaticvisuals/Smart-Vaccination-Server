@@ -13,7 +13,8 @@ public class UserRegistrationDTO {
 	private String countryname;
 	private String[] hobbies;
     private String gender;
-	
+
+    //custom validator applied
     @Age(lower=30, upper=75)
     private Integer age;
 	

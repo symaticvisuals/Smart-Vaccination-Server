@@ -17,10 +17,12 @@ import com.project.api.UserInfoDTO;
 @Controller
 public class SmartVaccinationAppController {
 
+	//@DeepanshuGoel
+	// to do add name of home-page  
 	@RequestMapping("/")
 	public String showHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfo) {
 		
-		//read existingproperty by fetchingit from dto
+		//read existing property by fetching it from dto
 		
 		return "home-page";
 	}

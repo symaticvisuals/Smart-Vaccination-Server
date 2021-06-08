@@ -10,10 +10,6 @@ public class UserInfoDTO {
 	@Size(min = 3, max = 15, message = "{username.size}")
 	private String username = "user name here";
 
-	@NotBlank(message = "* Crush Name can't be blank")
-	@Size(min = 3, max = 15, message = "{crushname.size}")
-	private String crushname = "crush name here";
-
 	@AssertTrue(message = "you have to agree to use our app")
 	private boolean termAndCondition;
 
@@ -23,7 +19,7 @@ public class UserInfoDTO {
 
 	@Override
 	public String toString() {
-		return "UserInfoDTO [username=" + username + ", crushname=" + crushname + "]";
+		return "UserInfoDTO [username=" + username + "]";
 	}
 
 	public String getUsername() {
@@ -34,13 +30,7 @@ public class UserInfoDTO {
 		this.username = username;
 	}
 
-	public String getCrushname() {
-		return crushname;
-	}
 
-	public void setCrushname(String crushname) {
-		this.crushname = crushname;
-	}
 
 	/**
 	 * @return the termAndCondition

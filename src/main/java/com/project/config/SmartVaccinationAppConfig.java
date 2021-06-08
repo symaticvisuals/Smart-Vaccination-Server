@@ -16,7 +16,7 @@ import com.project.formatter.PhoneNumberFormatter;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "com.ncu.lc")
+@ComponentScan(basePackages = "com.project")
 
 public class SmartVaccinationAppConfig implements WebMvcConfigurer {
 
