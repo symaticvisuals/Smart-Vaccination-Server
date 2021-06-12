@@ -23,12 +23,12 @@ import com.project.validator.EmailValidator;
 import com.project.validator.UserNameValidator;
 
 @Controller
-public class RegistrationController {
+public class PatientRegistrationController {
 	
 	@Autowired
 	private EmailValidator emailvalidator;
 
-	@RequestMapping("/register")
+	@RequestMapping("/patientregister")
 	public String showRegistrationPage(@ModelAttribute("userRegister") UserRegistrationDTO userRegistrationDTO) {
 		userRegistrationDTO.setName("abhi");
 		userRegistrationDTO.setName("abhi123@");
