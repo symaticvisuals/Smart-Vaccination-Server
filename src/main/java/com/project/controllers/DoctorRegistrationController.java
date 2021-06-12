@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.project.api.CommunicationDTO;
 import com.project.api.DoctorRegistrationDTO;
 import com.project.api.Phone;
-import com.project.api.UserRegistrationDTO;
 import com.project.propertyeditor.NamePropertyEditor;
 import com.project.validator.EmailValidator;
 import com.project.validator.UserNameValidator;
