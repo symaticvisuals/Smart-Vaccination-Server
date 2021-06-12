@@ -19,11 +19,16 @@ import com.project.api.CommunicationDTO;
 import com.project.api.Phone;
 import com.project.api.UserRegistrationDTO;
 import com.project.propertyeditor.NamePropertyEditor;
+import com.project.service.UserService;
 import com.project.validator.EmailValidator;
 import com.project.validator.UserNameValidator;
 
 @Controller
 public class PatientRegistrationController {
+	
+	@Autowired
+	UserService service;
+	
 	
 	@Autowired
 	private EmailValidator emailvalidator;
@@ -50,6 +55,10 @@ public class PatientRegistrationController {
 	@RequestMapping("/registration-sucess")
 	public String processUserRegistration(@Valid @ModelAttribute("userRegister") UserRegistrationDTO userRegistrationDTO,BindingResult result) {
 	
+		if(service.registerUser(userRegistrationDTO)) {
+			return null ;
+		}
+		
 		System.out.println("inside processUserReg method");
 		System.out.println("Name value entered by user : " + userRegistrationDTO.getName()+ "|" );
 		
