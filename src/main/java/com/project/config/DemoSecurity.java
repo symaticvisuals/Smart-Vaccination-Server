@@ -1,4 +1,4 @@
-package com.project.springSecurity;
+package com.project.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.User.UserBuilder;
 @EnableWebSecurity
 public class DemoSecurity extends WebSecurityConfigurerAdapter{
 
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) 
 			throws Exception {
