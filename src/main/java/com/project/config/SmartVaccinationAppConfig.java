@@ -1,5 +1,6 @@
 package com.project.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -77,6 +78,7 @@ public class SmartVaccinationAppConfig implements WebMvcConfigurer {
 		 
 	}
 	@Bean
+	@Autowired
 	public JdbcTemplate jdbcTemplate() {
 		return new JdbcTemplate((javax.sql.DataSource) getDataSource());
 	}
