@@ -12,7 +12,7 @@ public class UserDAO1 {
 	public String addUser(User user) {
 		// TODO Auto-generated method stub
 		
-		int records =jdbc.update("insert into tbl_user (user_id,user_name,country,gender) values (?,?,?,?)",user.getUser_id(),user.getUser_name(),user.getCountry(),user.getGender() );
+		int records =jdbc.update("insert into tbl_user (firstName,lastName,age) values (?,?,?)",user.getFirstName(),user.getLastname(),user.getAge());
 	if(records>0) {
 		return "user added successfully";
 	}else {

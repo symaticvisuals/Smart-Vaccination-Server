@@ -69,14 +69,14 @@ public class SmartVaccinationAppConfig implements WebMvcConfigurer {
 		
 		DriverManagerDataSource ds = new DriverManagerDataSource();
 		ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost:3306/wordcount");
-		ds.setUsername("root");
-        ds.setPassword("A818CAD3");
+		ds.setUrl("mysql://f2auu89goie57da1:zkdyv5wstinjpjlq@dfkpczjgmpvkugnb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/wj0uwmr5rp8c77kt");
+		ds.setUsername("f2auu89goie57da1");
+        ds.setPassword("zkdyv5wstinjpjlq");
         return ds;
 		
 		 
 	}
-	
+	@Bean
 	public JdbcTemplate jdbcTemplate() {
 		return new JdbcTemplate((javax.sql.DataSource) getDataSource());
 	}

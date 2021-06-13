@@ -4,49 +4,86 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class User {
-	
-	private int user_id;
-	private String user_name;
-	private String country;
-	private String gender;
-	 public User(){
-		
+	private String firstName;
+	private String lastname;
+	private String age;
+	private String doseNumber;
+	private String bookingTime;
+	private String vaccineStatus;
+	private String vaccineName;
+
+	public String getFirstName() {
+		return firstName;
 	}
-	public User(int user_id, String user_name, String country, String gender) {
-		super();
-		this.user_id = user_id;
-		this.user_name = user_name;
-		this.country = country;
-		this.gender = gender;
-	}
+
 	@Override
 	public String toString() {
-		return "user [user_id=" + user_id + ", user_name=" + user_name + ", country=" + country + ", gender=" + gender
-				+ "]";
+		return "Patient [firstName=" + firstName + ", lastname=" + lastname + ", age=" + age + ", doseNumber="
+				+ doseNumber + ", bookingTime=" + bookingTime + ", vaccineStatus=" + vaccineStatus + ", vaccineName="
+				+ vaccineName + "]";
 	}
-	public int getUser_id() {
-		return user_id;
-	}
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
-	}
-	public String getUser_name() {
-		return user_name;
-	}
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
-	}
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	} 
 
+	public User(String firstName, String lastname, String age, String doseNumber, String bookingTime,
+			String vaccineStatus, String vaccineName) {
+		super();
+		this.firstName = firstName;
+		this.lastname = lastname;
+		this.age = age;
+		this.doseNumber = doseNumber;
+		this.bookingTime = bookingTime;
+		this.vaccineStatus = vaccineStatus;
+		this.vaccineName = vaccineName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public String getDoseNumber() {
+		return doseNumber;
+	}
+
+	public void setDoseNumber(String doseNumber) {
+		this.doseNumber = doseNumber;
+	}
+
+	public String getBookingTime() {
+		return bookingTime;
+	}
+
+	public void setBookingTime(String bookingTime) {
+		this.bookingTime = bookingTime;
+	}
+
+	public String getVaccineStatus() {
+		return vaccineStatus;
+	}
+
+	public void setVaccineStatus(String vaccineStatus) {
+		this.vaccineStatus = vaccineStatus;
+	}
+
+	public String getVaccineName() {
+		return vaccineName;
+	}
+
+	public void setVaccineName(String vaccineName) {
+		this.vaccineName = vaccineName;
+	}
 }
