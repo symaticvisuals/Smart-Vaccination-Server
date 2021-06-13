@@ -4,6 +4,8 @@ import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.project.validator.ValidPassword;
+
 public class UserInfoDTO {
 
 	@NotBlank(message = "* Your Name can't be blank")
@@ -15,6 +17,8 @@ public class UserInfoDTO {
 	private String bookingTime;
 	private boolean isVaccinated;
 	private String vaccinationName;
+	@ValidPassword
+	private String password;
 
 	@Override
 	public String toString() {
