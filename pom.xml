@@ -135,7 +135,19 @@
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>5.4.5</version>
 		</dependency>
+		<!-- custom password validation dependency -->
+<dependency>
+	<groupId>org.passay</groupId>
+	<artifactId>passay</artifactId>
+	<version>1.0</version>
+</dependency>
 
+<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<dependency>
+  <groupId>com.google.guava</groupId>
+  <artifactId>guava</artifactId>
+  <version>r05</version>
+</dependency>
 
 	</dependencies>
 
