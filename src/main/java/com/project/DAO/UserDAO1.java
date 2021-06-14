@@ -1,6 +1,7 @@
 package com.project.DAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.project.api.User;
@@ -9,6 +10,7 @@ public class UserDAO1 {
 	@Autowired
 	JdbcTemplate jdbc ;
 
+	@Bean
 	public String addUser(User user) {
 		// TODO Auto-generated method stub
 		

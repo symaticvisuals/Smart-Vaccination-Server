@@ -4,12 +4,16 @@ import java.sql.SQLException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.project.api.UserInfoDTO;
 import com.project.api.UserRegistrationDTO;
 
-@Repository
+
+@Controller("userDAO1")
 public class UserDaoImp implements UserDao{
 
 	@Autowired
@@ -24,8 +28,5 @@ public class UserDaoImp implements UserDao{
 		jdbc.update(sql,user.getUsername());
 		return 0;
 	}
-
-
-
 
 }
