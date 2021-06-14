@@ -8,19 +8,54 @@ public class User {
 	private String lastname;
 	private String age;
 	private String doseNumber;
-	private String bookingTime;
+	private String startTime;
+	private String endTime;
 	private String vaccineStatus;
 	private String vaccineName;
-
-	public String getFirstName() {
-		return firstName;
-	}
+	private String aadharCard;
+	private String doctorName;
 
 	@Override
 	public String toString() {
-		return "Patient [firstName=" + firstName + ", lastname=" + lastname + ", age=" + age + ", doseNumber="
-				+ doseNumber + ", bookingTime=" + bookingTime + ", vaccineStatus=" + vaccineStatus + ", vaccineName="
-				+ vaccineName + "]";
+		return "User [firstName=" + firstName + ", lastname=" + lastname + ", age=" + age + ", doseNumber=" + doseNumber
+				+ ", startTime=" + startTime + ", endTime=" + endTime + ", vaccineStatus=" + vaccineStatus
+				+ ", vaccineName=" + vaccineName + ", aadharCard=" + aadharCard + ", doctorName=" + doctorName + "]";
+	}
+
+	public String getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
+
+	public String getAadharCard() {
+		return aadharCard;
+	}
+
+	public void setAadharCard(String aadharCard) {
+		this.aadharCard = aadharCard;
+	}
+
+	public String getDoctorName() {
+		return doctorName;
+	}
+
+	public void setDoctorName(String doctorName) {
+		this.doctorName = doctorName;
+	}
+
+	public String getFirstName() {
+		return firstName;
 	}
 
 	public User(String firstName, String lastname, String age, String doseNumber, String bookingTime,
@@ -30,7 +65,6 @@ public class User {
 		this.lastname = lastname;
 		this.age = age;
 		this.doseNumber = doseNumber;
-		this.bookingTime = bookingTime;
 		this.vaccineStatus = vaccineStatus;
 		this.vaccineName = vaccineName;
 	}
@@ -61,14 +95,6 @@ public class User {
 
 	public void setDoseNumber(String doseNumber) {
 		this.doseNumber = doseNumber;
-	}
-
-	public String getBookingTime() {
-		return bookingTime;
-	}
-
-	public void setBookingTime(String bookingTime) {
-		this.bookingTime = bookingTime;
 	}
 
 	public String getVaccineStatus() {
