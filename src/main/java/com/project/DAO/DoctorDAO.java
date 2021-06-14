@@ -13,7 +13,7 @@ public class DoctorDAO {
 	public static String addDoctor(Doctor doctor) {
 		// TODO Auto-generated method stub
 		
-		int records =jdbc.update("insert into doctor (firstName,lastName,location,aadharCard,qualification,availableTime) values (?,?,?,?,?,?)",doctor.getFirstName(),doctor.getLastname(),doctor.getLocation(),doctor.getAadharCard(),doctor.getQualification(),doctor.getAvailableTime());
+		int records =jdbc.update("insert into doctor (firstName,lastName,location,aadharCard,qualification,availableSlot) values (?,?,?,?,?,?)",doctor.getFirstName(),doctor.getLastname(),doctor.getLocation(),doctor.getAadharCard(),doctor.getQualification(),doctor.getAvailableSlot());
 	if(records>0) {
 		return "doctor added successfully";
 	}else {

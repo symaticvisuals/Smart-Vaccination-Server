@@ -5,14 +5,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Doctor {
 	public Doctor(String firstName, String lastname, String location, String aadharCard, String qualification,
-			String availableTime) {
+			String availableSlot) {
 		super();
 		this.firstName = firstName;
 		this.lastname = lastname;
 		this.location = location;
 		this.aadharCard = aadharCard;
 		this.qualification = qualification;
-		this.availableTime = availableTime;
+		this.availableSlot = availableSlot;
 	}
 
 	private String firstName;
@@ -20,7 +20,7 @@ public class Doctor {
 	@Override
 	public String toString() {
 		return "Doctor [firstName=" + firstName + ", lastname=" + lastname + ", location=" + location + ", aadharCard="
-				+ aadharCard + ", qualification=" + qualification + ", availableTime=" + availableTime + "]";
+				+ aadharCard + ", qualification=" + qualification + ", availableSlot=" + availableSlot + "]";
 	}
 
 	public String getFirstName() {
@@ -63,18 +63,18 @@ public class Doctor {
 		this.qualification = qualification;
 	}
 
-	public String getAvailableTime() {
-		return availableTime;
+	public String getAvailableSlot() {
+		return availableSlot;
 	}
 
 	public void setAvailableTime(String availableTime) {
-		this.availableTime = availableTime;
+		this.availableSlot = availableSlot;
 	}
 
 	private String lastname;
 	private String location;
 	private String aadharCard;
 	private String qualification;
-	private String availableTime;
+	private String availableSlot;
 
 }
