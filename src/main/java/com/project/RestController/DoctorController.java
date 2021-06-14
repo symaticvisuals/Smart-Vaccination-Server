@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.DAO.DoctorDAO;
 import com.project.api.Doctor;
-import com.project.service.UserService;
+
 
 @RestController
 public class DoctorController {

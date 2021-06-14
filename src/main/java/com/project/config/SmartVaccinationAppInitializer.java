@@ -15,8 +15,7 @@ public class SmartVaccinationAppInitializer extends AbstractAnnotationConfigDisp
 	// REGISTER SPRING CONFIG CLASS
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		Class arr[] = { SmartVaccinationAppConfig.class };
-		return arr;
+		return new Class[]{ SmartVaccinationAppConfig.class };
 	}
 
 	// FOR URL MAPPING
