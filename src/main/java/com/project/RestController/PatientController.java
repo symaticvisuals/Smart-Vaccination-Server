@@ -9,12 +9,12 @@ import com.project.DAO.PatientDAO;
 import com.project.api.Patient;
 
 @RestController
-public class UserController {
+public class PatientController {
 
 	@Autowired
 	private PatientDAO patientDao;
 
-	@RequestMapping(path = "/addpatient", method = RequestMethod.POST)
+	@RequestMapping(value = "/addpatient", method = RequestMethod.POST)
 	public String addpatient(Patient patient) {
 		return patientDao.addpatient(patient);
 
