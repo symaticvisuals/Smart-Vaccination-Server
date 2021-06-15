@@ -6,21 +6,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.DAO.DoctorDAO;
-import com.project.api.Doctor;
+import com.project.DAO.UserDAO1;
+import com.project.DAO.UserDao;
+import com.project.api.User;
 import com.project.service.UserService;
 
 @RestController
-public class DoctorController {
+public class UserController {
 
 	
 	
 	@Autowired
-	private DoctorDAO doctorDao; 
+	private UserDAO1 userDao; 
 	
-	@RequestMapping(path="/adddoctor",method = RequestMethod.POST)
-	public String addDoctor(Doctor doctor ) {
-		return DoctorDAO.addDoctor(doctor);
+	@RequestMapping(path="/adduser",method = RequestMethod.POST)
+	public String addUser(User user ) {
+		return userDao.addUser(user);
 		
 	}
 	
