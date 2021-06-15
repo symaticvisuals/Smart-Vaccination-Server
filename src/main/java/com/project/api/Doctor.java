@@ -4,23 +4,73 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Doctor {
-	public Doctor(String firstName, String lastname, String location, String aadharCard, String qualification,
-			String availableSlot) {
+	private int id;
+	private String username;
+	private String password;
+	private String firstName;
+	private String lastName;
+	private String aadhaar;
+	private String location;
+	private String email;
+	private int availableSlots;
+	private long phoneNumber;
+
+	public Doctor() {
 		super();
-		this.firstName = firstName;
-		this.lastname = lastname;
-		this.location = location;
-		this.aadharCard = aadharCard;
-		this.qualification = qualification;
-		this.availableSlot = availableSlot;
 	}
 
-	private String firstName;
+	public Doctor(int i, String username, String password, String firstName, String lastName, String aadhaar,
+			String location, String email, int availableSlots, long phoneNumber) {
+		this.id = i;
+		this.username = username;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.aadhaar = aadhaar;
+		this.location = location;
+		this.availableSlots = availableSlots;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+	}
 
-	@Override
-	public String toString() {
-		return "Doctor [firstName=" + firstName + ", lastname=" + lastname + ", location=" + location + ", aadharCard="
-				+ aadharCard + ", qualification=" + qualification + ", availableSlot=" + availableSlot + "]";
+	public long getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getFirstName() {
@@ -31,12 +81,20 @@ public class Doctor {
 		this.firstName = firstName;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getAadhaar() {
+		return aadhaar;
+	}
+
+	public void setAadhaar(String aadhaar) {
+		this.aadhaar = aadhaar;
 	}
 
 	public String getLocation() {
@@ -47,34 +105,18 @@ public class Doctor {
 		this.location = location;
 	}
 
-	public String getAadharCard() {
-		return aadharCard;
+	public int getAvailableSlots() {
+		return availableSlots;
 	}
 
-	public void setAadharCard(String aadharCard) {
-		this.aadharCard = aadharCard;
+	public void setAvailableSlots(int availableSlots) {
+		this.availableSlots = availableSlots;
 	}
 
-	public String getQualification() {
-		return qualification;
+	@Override
+	public String toString() {
+		return "Doctor [id=" + id + ", username=" + username + ", password=" + password + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", aadhaar=" + aadhaar + ", location=" + location + ", email=" + email
+				+ ", availableSlots=" + availableSlots + ", phoneNumber=" + phoneNumber + "]";
 	}
-
-	public void setQualification(String qualification) {
-		this.qualification = qualification;
-	}
-
-	public String getAvailableSlot() {
-		return availableSlot;
-	}
-
-	public void setAvailableTime(String availableTime) {
-		this.availableSlot = availableSlot;
-	}
-
-	private String lastname;
-	private String location;
-	private String aadharCard;
-	private String qualification;
-	private String availableSlot;
-
 }
