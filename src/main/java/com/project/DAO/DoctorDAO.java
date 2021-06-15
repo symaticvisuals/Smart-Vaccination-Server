@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import com.project.api.Doctor;
 
 public class DoctorDAO {
+	
 	@Autowired
 	static JdbcTemplate jdbc;
 
