@@ -10,11 +10,15 @@ public class DoctorDAO {
 	static
 	JdbcTemplate jdbc ;
 
-	public static String addDoctor(Doctor doctor) {
+	public String addDoctor(Doctor doctor) {
 		// TODO Auto-generated method stub
 		
-		int records =jdbc.update("insert into doctor (firstName,lastName,location,aadharCard,qualification,availableTime) values (?,?,?,?,?,?)",doctor.getFirstName(),doctor.getLastname(),doctor.getLocation(),doctor.getAadharCard(),doctor.getQualification(),doctor.getAvailableTime());
-	if(records>0) {
+		int records = jdbc.update(
+				"insert into doctor (username, password, firstName,lastName,aadhaar,location,availableSlot, email, phoneNumber) values (?,?,?,?,?,?,?,?,?)",
+				doctor.getUsername(), doctor.getPassword(), doctor.getFirstName(), doctor.getLastName(),
+				doctor.getAadhaar(), doctor.getLocation(), doctor.getAvailableSlots(), doctor.getEmail(),
+				doctor.getPhoneNumber());
+		if(records>0) {
 		return "doctor added successfully";
 	}else {
 		return "error";

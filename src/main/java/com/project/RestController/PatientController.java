@@ -5,25 +5,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.DAO.DoctorDAO;
-import com.project.api.Doctor;
-
-
+import com.project.DAO.PatientDAO;
+import com.project.api.Patient;
 
 
 @RestController
-public class DoctorController {
+public class PatientController {
 
 	
 	
 	@Autowired
-	private DoctorDAO doctorDao; 
+	private PatientDAO patientDao; 
 	
 	@RequestMapping(path="/adddoctor",method = RequestMethod.POST)
-	public String addPatient(Doctor doctor ) {
-		return doctorDao.addDoctor(doctor);
+	public String addPatient(Patient patient ) {
+		return patientDao.addPatient(patient);
 		
 	}
 	
 }
-
