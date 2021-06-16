@@ -14,10 +14,14 @@ public class DoctorController {
 	@Autowired
 	private DoctorDAO doctorDao;
 
-	@RequestMapping(path = "/adddoctor", method = RequestMethod.POST)
+	@RequestMapping(path = "/registerdoctor", method = RequestMethod.POST)
 	public String addDoctor(Doctor doctor) {
 		return DoctorDAO.addDoctor(doctor);
 
 	}
+	@RequestMapping(path = "/logindoctor", method = RequestMethod.POST)
+	public String loginDoctor(Doctor doctor) {
+		return DoctorDAO.addDoctor(doctor);
 
+	}
 }
