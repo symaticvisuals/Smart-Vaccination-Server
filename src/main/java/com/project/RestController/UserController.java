@@ -14,10 +14,15 @@ public class UserController {
 	@Autowired
 	private PatientDAO patientDao;
 
-	@RequestMapping(path = "/addpatient", method = RequestMethod.POST)
+	@RequestMapping(path = "/registerpatient", method = RequestMethod.POST)
 	public String addpatient(Patient patient) {
 		return patientDao.addpatient(patient);
 
 	}
+	@RequestMapping(path = "/loginpatient", method = RequestMethod.POST)
+	public String loginpatient(Patient patient) {
+		return patientDao.addpatient(patient);
+
+	}	
 
 }
